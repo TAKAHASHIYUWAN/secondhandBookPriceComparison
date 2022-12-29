@@ -1,0 +1,129 @@
+html {
+    font-size: 100%; /* 16px */
+}
+body {
+
+    color: black;
+    font-family: "Sawarabi Gothic";
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    font-size: 1.3rem;
+}
+
+img {
+    max-width: 100% ;
+}
+
+li {
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.site-title {
+    line-height: 1px;
+    font-weight: 600;
+    font-size: 2.4rem;
+    margin-top: 20px;
+}
+
+.site-title a {
+    color: blue;
+}
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto 130px auto;
+}
+
+.section-title {
+    margin: 30px auto;
+    text-align: center;
+}
+
+/* header */
+
+#header {
+    max-width: 960px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 4%;
+    height: 170px;
+}
+
+#header ul {
+    display: flex;
+    padding: 10px 0;
+    align-items: center;
+
+}
+
+#header ul li {
+    font-size: 0.9rem;
+    margin-left: 30px;
+}
+
+#header ul li a {
+    color: black;
+    transition: all 0.3s;
+}
+
+#header ul li a:hover {
+    opacity: 0.5;
+}
+
+
+#main img {
+    width: 100%;
+    max-width: 1920px;
+    height: 400px;
+    object-fit:cover;
+}
+
+
+/*about*/
+
+#about ul {
+    margin-bottom: 30px;
+}
+
+#about ul li:first-child {
+    margin-bottom: 30px;
+}
+
+
+@media screen and ( max-width: 600px ) {
+    /* header */
+    #header {
+        flex-direction: column;
+        height: auto;
+        margin-top: 20px;
+        
+    }
+    #header .site-title {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,47 @@
+{% extends 'huruhonApp/base.html' %} {% block content %}
+
+
+    <form method="post" class="searchForm" action="">
+        {% csrf_token %}
+        <div class="searcharea ">
+            <div class="worknamearea">
+                <label for="workname">作品名を入力してください。</label>
+                <input type="text" id="workname" name="workname">
+            </div>
+            <div class="authernamearea">
+                <label for="authername">著者名を入力してください。</label>
+                <input type="text" id="authername" name="authername" >
+            </div>
+            <div class="publishernamearea">
+                <label for="publishername">出版社を入力してください。</label>
+                <input type="text" id="publishername" name="publishername" >
+            </div>
+        </div>
+        <div class="searcharea">
+            <input type="submit" value="検索" class="buttonarea" >
+        </div>
+    </form>
+    <h3 id="booktitle">{{books.booktitle}}</h3>
+    <div class="bookoff">
+        <h3>bookoff</h3>
+        {%for key,value in books.bookoff.items %}
+        
+            <h4>{{key}}  :  {{value}}</h4>
+        
+        {% endfor %}
+    </div>
+    <div class="valuebooks">
+        <h3>valuebooks</h3>
+
+        {% for key,value in books.valuebooks.items %}
+        
+            <h4>{{key}} : {{value}}</h4>
+        
+    </div>
+        {% endfor %}
+
+    
+
+
+
+    {% endblock content %}

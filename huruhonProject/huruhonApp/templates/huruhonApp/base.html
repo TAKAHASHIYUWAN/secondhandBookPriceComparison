@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %} <!-- staticを読み込む時に必要 --> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="数あるオンライン古本ショップの中から、最安値のショップを探そう。">
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css" />
+    <link rel="stylesheet" href=" {% static 'css/base.css' %} ">
+    <link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic" rel="stylesheet">
+    <title>古本カカクヒカク</title>
+</head>
+<body>
+    <!-- Header -->
+    <header id = "header">
+        <h1 class="site-title">
+            <a href="#">古本カカクヒカク</a>
+        </h1>
+        <nav>
+        <!--
+            navはブロック要素で、縦並び。これを直すためにはCSSで操作する必要がある。
+        -->
+            <ul>
+                <li><a href="#record">買いたい本</a></li>
+                <li><a href="#search">古本の価格比較</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="main">
+        <img src="{% static 'img/huruhon1.jpg'%}" alt="">
+    </div>
+    <div class="huruhonAppWrapper">
+        {% block content %} {% endblock content %}
+    </div>
+    
+
+</body>
+</html>
